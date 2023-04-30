@@ -31,6 +31,7 @@ function createGrid(size) {
   for (let i = 0; i < size * size; i++) {
     let cell = document.createElement("div");
     cell.classList.add("cell");
+    cell.ondragstart = () => false;
 
     gridContainer.append(cell);
   }
