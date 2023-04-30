@@ -1,6 +1,17 @@
+/* GENERAL STYLING */
+:root {
+  /* Primary colors */
+  --black: rgb(0, 0, 0);
+  --dark-grey: rgb(30, 30, 30);
+  --very-dark-grey: rgb(20, 20, 20);
+  --orange: rgb(213, 128, 38);
+  --white: rgb(255, 255, 255);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 *,
@@ -9,4 +20,183 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--dark-grey);
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem 0;
+}
+
+.header-heading {
+  font-size: 7.2rem;
+  letter-spacing: 3px;
+  color: var(--orange);
+  text-shadow: var(--black) 3px 6px 10px;
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+.tools-container {
+  width: 28rem;
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem;
+
+  background-color: var(--dark-grey);
+  border: 1px solid var(--orange);
+  box-shadow: 0 3px 10px 0px var(--black);
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.color-btn {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--orange);
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 10px 0px var(--black);
+}
+
+.color-btn:hover {
+  background-color: var(--orange);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.active {
+  background-color: var(--orange);
+}
+
+/* COLOR PICKER */
+input[type="color"] {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  background-color: transparent;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+  border: 0;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+}
+
+/* RANGE CONTAINER*/
+.size-container {
+  margin-top: auto;
+}
+
+.size-label {
+  font-size: 3rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* RANGE STYLING */
+/* Removing default styling */
+input[type="range"] {
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--orange);
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+/* Styling for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+/* Styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 6.4px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--black);
+}
+
+/* GRID CONTAINER */
+.grid-container {
+  width: 65rem;
+  height: 65rem;
+  display: grid;
+  background-color: var(--white);
 }
