@@ -35,7 +35,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 3rem 0;
 }
 
@@ -59,9 +58,7 @@ button {
   width: 28rem;
   display: flex;
   flex-direction: column;
-
   padding: 3rem;
-
   background-color: var(--dark-grey);
   border: 1px solid var(--orange);
   box-shadow: 0 3px 10px 0px var(--black);
@@ -135,7 +132,6 @@ input[type="color"] {
 }
 
 /* RANGE STYLING */
-/* Removing default styling */
 input[type="range"] {
   width: 100%;
   background: transparent;
