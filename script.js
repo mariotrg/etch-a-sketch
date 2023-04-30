@@ -11,7 +11,10 @@ const DEFAULT_MODE = "color";
 let isDown = false;
 let currentMode = DEFAULT_MODE;
 
-gridContainer.addEventListener("mousedown", () => (isDown = true));
+gridContainer.addEventListener("mousedown", (e) => {
+  isDown = true;
+  paint(e);
+});
 gridContainer.addEventListener("mouseup", () => (isDown = false));
 gridContainer.addEventListener("mouseleave", () => (isDown = false));
 gridContainer.addEventListener("mouseover", (e) => {
