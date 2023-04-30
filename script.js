@@ -1,6 +1,11 @@
 const gridContainer = document.querySelector(".grid-container");
+const sizePicker = document.querySelector("#size-picker");
 
 const DEFAULT_SIZE = 16;
+
+sizePicker.addEventListener("mouseup", () => {
+  createGrid(sizePicker.value);
+});
 
 function createGrid(size) {
   gridContainer.innerHTML = "";
